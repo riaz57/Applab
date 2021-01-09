@@ -3,10 +3,6 @@ $(document).ready(function(){
 	$(window).on('load',function(){
 		$('#loader-inner').fadeOut(1000);
 	});
-
-	screenSize();
-	backToTop();
-	$(window).resize(screenSize);
 });
 
 
@@ -36,7 +32,7 @@ function screenSize(){
 			$('.mobile_nav').removeClass('active');
 		});
 	}	
-}
+}		
 	//scroll to top
 function backToTop(){
 	var height = $('#home').height();
@@ -117,6 +113,9 @@ $('.testimonial_content').owlCarousel({
     dots: false
 });
 
+screenSize();
+backToTop();
+$(window).resize(screenSize);
 
 });
 
